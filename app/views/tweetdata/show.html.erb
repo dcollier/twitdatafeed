@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Author:</b>
+  <%= @tweetdatum.author %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @tweetdatum.content %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @tweetdatum.time %>
+</p>
+
+
+<%= link_to 'Edit', edit_tweetdatum_path(@tweetdatum) %> |
+<%= link_to 'Back', tweetdata_path %>

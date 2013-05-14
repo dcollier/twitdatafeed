@@ -1,0 +1,27 @@
+<h1>Listing tweetdata</h1>
+
+<table>
+  <tr>
+    <th>Author</th>
+    <th>Content</th>
+    <th>Time</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tweetdata.each do |tweetdatum| %>
+  <tr>
+    <td><%= tweetdatum.author %></td>
+    <td><%= tweetdatum.content %></td>
+    <td><%= tweetdatum.time %></td>
+    <td><%= link_to 'Show', tweetdatum %></td>
+    <td><%= link_to 'Edit', edit_tweetdatum_path(tweetdatum) %></td>
+    <td><%= link_to 'Destroy', tweetdatum, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tweetdatum', new_tweetdatum_path %>
