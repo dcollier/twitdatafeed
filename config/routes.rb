@@ -1,6 +1,11 @@
 Twitdatafeed::Application.routes.draw do
-  resources :tweetdata
+  get "tweetquery/index"
 
+  get "showtweets/index"
+
+  resources :tweetdata
+  resources :tweetquery
+  resources :showtweets
 
   get "home/index"
 
