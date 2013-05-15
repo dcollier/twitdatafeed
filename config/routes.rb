@@ -1,7 +1,5 @@
 Twitdatafeed::Application.routes.draw do
-  get "tweetquery/index"
 
-  get "showtweets/index"
 
   resources :tweetdata
   resources :tweetquery
