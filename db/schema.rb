@@ -10,12 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130514063639) do
+ActiveRecord::Schema.define(:version => 20130516061743) do
 
   create_table "tweetdata", :force => true do |t|
     t.string   "author"
     t.string   "content"
     t.datetime "time"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.integer  "tweetqueryargs_id"
+  end
+
+  create_table "tweetqueryargs", :force => true do |t|
+    t.string   "hashtags"
+    t.string   "users"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

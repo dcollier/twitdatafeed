@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hashtags: MyString
+  users: MyString
+
+two:
+  hashtags: MyString
+  users: MyString
