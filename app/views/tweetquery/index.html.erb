@@ -1,2 +1,8 @@
 <h1>Tweetquery#index</h1>
-<p>Find me in app/views/tweetquery/index.html.erb</p>
+<%= form_tag({:controller => "showtweets", :action => "show"}, :method => "get" ) do %>
+	<%= label_tag(:hashtags, "Enter comma delimited hashtags") %>
+	<%= text_field_tag(:hashtags) %>
+	<%= label_tag(:usernames, "Enter comma delimited usernames") %>
+	<%= text_field_tag(:usernames) %>
+	<%= submit_tag("Submit") %>
+<% end %>	

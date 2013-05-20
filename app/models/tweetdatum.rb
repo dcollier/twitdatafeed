@@ -1,4 +1,3 @@
 class Tweetdatum < ActiveRecord::Base
-  belongs_to: tweetqueryargs
-  attr_accessible :author, :content, :time
+  belongs_to :tweetqueryargs
 end
