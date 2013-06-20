@@ -1,4 +1,4 @@
 class Tweetqueryargs < ActiveRecord::Base
-  has_many: tweetdata
+  has_many :tweetdata
   attr_accessible :hashtags, :users
 end
