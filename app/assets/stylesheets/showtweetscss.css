@@ -1,0 +1,11 @@
+.content {
+	width: 100%;
+}
+.left_side { 
+	width: 50%; 
+	float: left;
+}
+.right_side { 
+	width: 50%;
+	float: right;
+}
