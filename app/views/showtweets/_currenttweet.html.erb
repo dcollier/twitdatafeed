@@ -1,0 +1,7 @@
+<%= stylesheet_link_tag "showtweetscss" %>
+<div class="post">
+	<p class="meta"><%=currenttweet[:user]%></p>
+	<div class="entry">
+		<p><img src=<%=currenttweet[:imgurl]%> width="100" height="100" alt="" class="alignleft border" /><%=currenttweet[:text]%></p>
+	</div>
+</div>

@@ -7,12 +7,6 @@ class ShowtweetsController < ApplicationController
   def show
   	logger.info params[:hashtags]
 	logger.info params[:usernames]
-	@tweetargs = Tweetqueryargs.where("hashtags = ? AND users = ?", params[:hashtags], params[:usernames])
-	if @tweetargs.blank?
-		Tweetqueryargs.create(:hashtags=>params[:hashtags], :users=>params[:usernames])
-	end	
-	@tweetargs = Tweetqueryargs.where("hashtags = ? AND users = ?", params[:hashtags], params[:usernames])
-	logger.info @tweetargs
 	logger.info TWITTER_CONFIG['consumer_key'] 
 	Twitter.configure do |config|
 	config.consumer_key = TWITTER_CONFIG['consumer_key']
