@@ -3,7 +3,8 @@
 	<div class="left_side">
 		<p>left</p>
 	</div>
-	<div class="right_side">
+	<div class="right_side">		
 		<p>right</p>	
+		<%= render :partial => "currenttweet", :collection => @currenttweets %>
 	</div>
 </div>
