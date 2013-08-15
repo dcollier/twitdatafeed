@@ -1,6 +1,7 @@
 Twitdatafeed::Application.routes.draw do
 
   match "/showtweets/show" => "showtweets#show"
+  match "/showtweets/update" => "showtweets#update"
   resources :tweetdata
   resources :tweetquery
   resources :showtweets
