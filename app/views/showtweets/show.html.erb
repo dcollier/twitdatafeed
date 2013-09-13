@@ -1,30 +1,47 @@
 <%= stylesheet_link_tag "showtweetscss" %>
-<script type="text/javascript" src='http://code.jquery.com/jquery-1.8.2.js'>
-</script>
-<div class="content">
-	<div class="left_side">
-		<p>left</p>
-	</div>
-	<div class="right_side">
-	  <div id= 'query'>
-	    <%=@query%>
-	  </div>
-	   <p>right</p>
-	    <div id="tweets">
-	       <%= render :partial => "currenttweet", :collection => @currenttweets %>
-	    </div>
-	</div>
+<script type="text/javascript" src='http://code.jquery.com/jquery-1.8.2.js'></script>
+<div id="content">
+   <div id="left_side">
+      <h1 id='agentheader'>
+      PENDING MISSIONS</h2>
+      <div class="rules">
+         <p class='rule'>Mission #0913: Have FUN!</p>
+         <p class='rule'>Mission #2013: Send us your tweet! We'd love to hear your birthday message</p>
+         <p class='rule'>Mission #3421: Have you gotten your picture taken? Find the photographer!</p>
+         <p class='rule'>Mission #4508: Don't leave without saying goodbye! We want to thank you for coming! </p>
+      </div>
+      <div class="tweetwhere">
+         <img src="/images/epic.jpg" align="RIGHT" height="300" width="300" />
+         <p class="hashuser">Tweet at:</p>
+         <p class="hashuser">#theepic321</p>
+         <p class="hashuser">@theepic321</p>
+      </div>
+   </div>
+   <div id="right_side">
+      <h1 id='agentheader'>
+      AGENT UPDATE</h2>
+      <div id='query'  style="display: none;">
+         <%=@query%>
+      </div>
+      <div id="tweets">
+         <%= render :partial => "currenttweet", :collection => @currenttweets %>
+      </div>
+   </div>
 </div>
-
 <script>
-$(document).ready(
-  function(){
-    setInterval(function(){
+   $(document).ready(
+     function(){
+       updateTweet()
+       setInterval(function(){updateTweet()}, 60000);
+     
+     function updateTweet() {
       $.ajax({
-        url: "/showtweets/update?utf8=✓&query=" + $('#query').text(),
-        type: "GET",
-        dataType: "script"
-    });
-  }, 5000);
-});
+           url: "/showtweets/update?utf8=âœ“&query=" + $('#query').text(),
+           type: "GET",
+           dataType: "script"
+       });
+     }
+     
+     
+   });
 </script>

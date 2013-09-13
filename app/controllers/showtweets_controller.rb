@@ -57,7 +57,6 @@ class ShowtweetsController < ApplicationController
 	end
 	logger.info @currenttweets
 	logger.info "$$$$$$$$$$$$$$$$$$$"
-	logger.info @currenttweets[0][:text]
 	logger.info "****************"
 	respond_to do |format|
 	  format.js { render :action => 'update' }

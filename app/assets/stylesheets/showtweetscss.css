@@ -1,25 +1,103 @@
-.content {
-	width: 100%;
+body{
+    background-color: black;
+    font-family: courier new;
 }
-.left_side { 
-	width: 50%; 
-	float: left;
+#content {
+  width: 100%;
+
 }
-.right_side { 
-	width: 50%;
-	float: right;
+#left_side { 
+  width: 49%; 
+  float: left;
+  border-right-width:1px;
+  border-right-style:solid;
+  border-right-color: yellow;
+}
+#right_side { 
+  width: 50%;
+  float: right;
 }
 
-.post .meta {
-	padding-bottom: 5px;
-	text-align: left;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 20px;
+.post {
+  padding-bottom: 30px;
 }
+
+.rules{
+    margin-top: 50px;
+    margin-right: 15px;
+}
+.rule{
+  font-family: courier new;
+  color: #7FFF00;
+  margin-top: 20px;
+  font-size: 15px;
+  text-align: left;
+  margin-left: 15px;
+  line-height: 110%;
+}
+
+.hashuser{
+  font-family: courier new;
+  color: yellow;
+  margin-top: 35px;
+  margin-left: 20px;
+  margin-right: 10px;
+  font-size: 23px;
+  text-align: left;
+  margin-left: 15px;
+  line-height: 110%;
+}
+
+.placeholder{
+  font-family: courier new;
+  color: black;
+  margin-top: 35px;
+  font-size: 20px;
+  text-align: left;
+  margin-left: 15px;
+  line-height: 110%;
+}
+
+#agentheader{
+  color: #7FFF00;
+  text-align: center;
+  text-decoration:underline;
+}
+
 
 .post .entry {
-	text-align: justify;
-	margin-bottom: 25px;
-	padding: 10px 0px 0px 0px;
+	text-align: left;
+	padding: 30px 0px 0px 0px;
+}
+
+.post .entry .tweet{
+	margin-left: 95px;
+	margin-right: 80px;
+	font-size: 14px;
+	line-height: 110%;
+	color: #4CBB17;
+    font-family: courier new;
+	
+}
+.post .entry .user_image{
+	margin-left: 15px;	
+}
+
+.divider {
+  	text-decoration:underline;
+	color: white;
+	line-height: 0%;
+	margin-left: 80px;
+	margin-right: 80px;
+}
+
+.post .entry .tweetu{
+	margin-left: 95px;
+	margin-right: 80px;
+	font-size: 10px;
+	line-height: 110%;
+	color:#4CBB17;
+	text-decoration:underline;
+	font-family: courier new;
 }
 
